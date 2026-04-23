@@ -5,5 +5,5 @@ database attached to this project so messages do not persist.
 
 ## Routes
 
-- / home
-- /new new message
+- home /
+- new message /new

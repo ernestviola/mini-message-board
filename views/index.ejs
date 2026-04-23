@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='/styles.css'>
     <title>Mini Message Board</title>
   </head>
   <body>
     <h1>Message Board</h1>
+    <div>
+      <ul class='message-board__container'>
+        <% messages.forEach( (message) => { %>
+          <%- include('components/message', {message}) %>
+          <% }) %>
+      </ul>
+    </div>
   </body>
 </html>
