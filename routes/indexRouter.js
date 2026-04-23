@@ -9,6 +9,6 @@ indexRouter.get('/', indexController.get);
 indexRouter
   .route('/new')
   .get(newMessageController.get)
-  .post((req, res) => res.send('New Post'));
+  .post(newMessageController.post);
 
 export default indexRouter;

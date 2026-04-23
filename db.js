@@ -13,4 +13,12 @@ db.messages = [
   },
 ];
 
+db.addMessage = async (text, user) => {
+  db.messages.append({
+    text,
+    user,
+    added,
+  });
+};
+
 export default db;
