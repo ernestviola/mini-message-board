@@ -8,8 +8,8 @@
   </head>
   <body>
     <h1>Message Board</h1>
-    <div>
-      <ul class='message-board__container'>
+    <div class='message-board__container'>
+      <ul class='message-board'>
         <% messages.forEach( (message) => { %>
           <%- include('components/message', {message}) %>
           <% }) %>
