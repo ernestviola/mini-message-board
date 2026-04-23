@@ -9,6 +9,7 @@
   <body>
     <h1>Message Board</h1>
     <div class='message-board__container'>
+      <a class='new-message__btn' href='/new'>New +</a>
       <ul class='message-board'>
         <% messages.forEach( (message) => { %>
           <%- include('components/message', {message}) %>
