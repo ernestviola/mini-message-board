@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
 body {
   min-height: 100vh;
 }
@@ -39,15 +49,16 @@ h1 {
   padding: 10px;
   max-width: 800px;
   min-width: 300px;
-  max-height: 80vh;
+
   margin: 0px auto;
   margin-top: 50px;
 }
 
 .message-board {
   background-color: var(--primary-color);
-  position: relative;
+  max-height: 80vh;
   overflow: auto;
+  position: relative;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -96,6 +107,59 @@ h1 {
 }
 
 .new-message__btn:hover {
+  background-color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.new-message__container {
+  position: relative;
+  padding: 10px;
+  max-width: 800px;
+  min-width: 300px;
+  max-height: 80vh;
+  margin: 0px auto;
+  margin-top: 50px;
+}
+
+.new-message__form {
+  background-color: var(--primary-color);
+  position: relative;
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px #000000;
+}
+
+.new-message__form > * {
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+label > * {
+  width: 100%;
+  padding: 8px;
+}
+textarea {
+  resize: none;
+}
+
+.form-submit {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  box-shadow: 1px 1px 4px #000000;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 14px;
+  transition: 0.2s ease;
+}
+
+.form-submit:hover {
   background-color: var(--primary-color);
   border-color: var(--secondary-color);
 }

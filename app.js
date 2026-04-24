@@ -1,4 +1,5 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -22,6 +23,7 @@ app.set('views', viewsPath);
 app.set('view engine', 'ejs');
 
 app.use(express.static(publicPath));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', indexRouter);
 app.all('/*splat', (req, res) => res.send('404 - Not Found'));
 

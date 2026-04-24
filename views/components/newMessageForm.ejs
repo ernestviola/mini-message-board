@@ -1,7 +1,17 @@
-<form action="POST">
-  <label for="name">Name: <input type="text" /></label>
+<form action="/new" method="post" class="new-message__form">
+  <label for="user"
+    >Name:
+    <input type="text" id="user" name="user" autocapitalize="on" required
+  /></label>
   <label for="message"
-    >Message: <textarea name="message" id="message"></textarea>
+    >Message:
+    <textarea
+      name="message"
+      id="message"
+      rows="4"
+      autocapitalize="on"
+      required
+    ></textarea>
   </label>
   <button type="submit" class="form-submit">Submit</button>
 </form>

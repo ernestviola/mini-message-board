@@ -14,10 +14,10 @@ db.messages = [
 ];
 
 db.addMessage = async (text, user) => {
-  db.messages.append({
+  db.messages.push({
     text,
     user,
-    added,
+    added: new Date(),
   });
 };
 
