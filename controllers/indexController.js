@@ -1,8 +1,8 @@
-import db from '../db.js';
+import { getAllMessages } from '../db/queries.js';
 
 const indexController = {
-  get: (req, res) => {
-    const messages = db.messages.sort((a, b) => (a.added > b.added ? -1 : 1));
+  get: async (req, res) => {
+    const messages = await getAllMessages();
     res.render('index', {
       messages: messages,
     });

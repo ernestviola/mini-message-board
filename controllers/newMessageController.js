@@ -1,4 +1,4 @@
-import db from '../db.js';
+import { newMessage } from '../db/queries.js';
 
 const newMessageController = {
   get: (req, res) => {
@@ -7,7 +7,8 @@ const newMessageController = {
 
   post: async (req, res) => {
     try {
-      await db.addMessage(req.body.message, req.body.user);
+      const { username, message } = req.body;
+      await newMessage(username, message);
       res.redirect('/');
     } catch (error) {
       console.log(error);
